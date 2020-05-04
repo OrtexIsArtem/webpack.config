@@ -43,7 +43,7 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode: 'development',
 	entry: {
-		main: './index.js',
+		main: ['@babel/polyfill', './index.js'],
 		analytics: './analytics.js'
 	},
 	output: {
@@ -83,7 +83,7 @@ module.exports = {
 				test: /\.(ttf|woff|woff2|eot)$/,
 				use: ['file-loader']
 			},
-			{
+			{ // BABEL
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: {
@@ -91,6 +91,9 @@ module.exports = {
 					options: {
 						presets: [
 							'@babel/preset-env'
+						],
+						plugins: [
+							'@babel/plugin-proposal-class-properties'
 						]
 					}
 				}
