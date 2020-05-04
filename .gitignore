@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/.gitignore
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/watcherTasks.xml
+.idea/webpack-vm.iml
+dist/
+node_modules/
+src/
